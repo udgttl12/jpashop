@@ -25,6 +25,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-devtools'
 	implementation "com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.8.0"
 	implementation 'org.javassist:javassist:3.23.1-GA'
+	testImplementation("org.junit.vintage:junit-vintage-engine") {
+		exclude group: "org.hamcrest", module: "hamcrest-core"
+	}
 //    implementation 'junit:junit:4.13.1'
     compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
